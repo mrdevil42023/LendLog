@@ -1,13 +1,6 @@
 # LendLog — Personal Lending Tracker
 
 <p align="center">
-  <img src="screenshots/screen-people.jpg" width="200" alt="People Screen"/>
-  <img src="screenshots/screen-records.jpg" width="200" alt="Records Screen"/>
-  <img src="screenshots/screen-analytics.jpg" width="200" alt="Analytics Screen"/>
-  <img src="screenshots/screen-profile.jpg" width="200" alt="Profile Screen"/>
-</p>
-
-<p align="center">
   <b>A personal lending tracker to keep tab of money you lend or borrow from friends and family.</b>
 </p>
 
@@ -180,91 +173,6 @@ Install the APK directly on any Android device. No Play Store required.
 | Language | TypeScript |
 | Build | EAS Build (Expo Application Services) |
 
----
-
-## Project Structure
-
-```
-artifacts/lendlog/
-├── app/
-│   ├── _layout.tsx              # Root layout with providers
-│   ├── +not-found.tsx           # 404 screen
-│   └── (tabs)/
-│       ├── _layout.tsx          # Tab bar layout
-│       ├── index.tsx            # Home Dashboard
-│       ├── records.tsx          # Transactions / Records list
-│       ├── people.tsx           # People grouped view
-│       ├── analytics.tsx        # Analytics & charts
-│       ├── profile.tsx          # Profile & settings
-│       └── settings.tsx         # Settings helpers
-├── components/
-│   ├── AddRecordModal.tsx       # Add/Edit record modal
-│   ├── RecordCard.tsx           # Single record card UI
-│   ├── PersonCard.tsx           # Person summary card
-│   ├── PersonModal.tsx          # Person detail modal
-│   ├── StatCard.tsx             # Analytics stat card
-│   ├── BarChart.tsx             # Monthly bar chart
-│   ├── PieChart.tsx             # Lent vs Borrowed chart
-│   ├── CustomTabBar.tsx         # Bottom tab bar
-│   ├── FadeInView.tsx           # Fade-in animation wrapper
-│   ├── KeyboardAwareScrollViewCompat.tsx
-│   ├── ErrorBoundary.tsx
-│   └── ErrorFallback.tsx
-├── context/
-│   ├── StorageContext.tsx       # Global data/state management
-│   └── ThemeContext.tsx         # Theme (dark/light) management
-├── constants/
-│   └── colors.ts                # Color palette definitions
-├── hooks/
-│   └── useColors.ts             # Theme-aware color hook
-├── types/
-│   └── index.ts                 # TypeScript interfaces
-├── assets/images/
-│   └── icon.png                 # App icon
-├── app.json                     # Expo app config
-├── eas.json                     # EAS build config
-├── package.json
-└── tsconfig.json
-```
-
----
-
-## Getting Started (Run from Source)
-
-### Prerequisites
-- Node.js 18+
-- pnpm or npm
-- Expo CLI
-- Android Studio (for Android emulator) or a physical Android device
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/lendlog.git
-cd lendlog/artifacts/lendlog
-
-# Install dependencies
-npm install
-
-# Start the development server
-npx expo start
-```
-
-Scan the QR code with the **Expo Go** app on your phone, or press `a` to open on an Android emulator.
-
-### Build APK
-
-```bash
-# Install EAS CLI
-npm install -g eas-cli
-
-# Login to Expo
-eas login
-
-# Build APK
-eas build -p android --profile preview
-```
 
 ---
 
